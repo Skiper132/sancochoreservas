@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil de Usuario</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body class="bg-dark text-light">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Tu Sitio de Restaurantes</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Restaurantes.html">Restaurantes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Perfil.html">Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container bg-white p-4 rounded my-5">
+        <h1 class="text-dark">Modificar Reserva</h1>
+
+        <section>
+            <h2 class="text-dark">Información de la Reserva</h2>
+            <p class="text-dark">Nombre del Restaurante: Nombre del Restaurante 1</p>
+            <p class="text-dark">Fecha de la Reserva: 01/02/2023</p>
+            <!-- Puedes agregar más detalles de la reserva aquí -->
+        </section>
+
+        <section>
+            <h2 class="text-dark">Nueva Información de Reserva</h2>
+            <form action="ruta_procesamiento_reserva_modificada" method="post">
+                <div class="form-group">
+                    <label for="fecha" class="text-dark">Nueva Fecha:</label>
+                    <input type="date" id="fecha" name="fecha" required class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="hora" class="text-dark">Nueva Hora:</label>
+                    <input type="time" id="hora" name="hora" required class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="personas" class="text-dark">Número de Personas:</label>
+                    <input type="number" id="personas" name="personas" required class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary">Modificar Reserva</button>
+            </form>
+        </section>
+    </div>
+
+    <footer class="bg-secondary text-light text-center py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Reservación de Restaurante</h4>
+                    <a href="pagina_reservacion.html">Reservar ahora</a>
+                </div>
+                <div class="col-md-4">
+                    <h4>Enlaces</h4>
+                    <a href="acerca_de_nosotros.html">Acerca de Nosotros</a>
+                </div>
+                <div class="col-md-4">
+                    <h4>Contacto</h4>
+                    <p>Teléfono: +123456789</p>
+                    <p>Email: info@tusitioderestaurantes.com</p>
+                    <p>Dirección: Calle Principal #123, Ciudad</p>
+                </div>
+            </div>
+        </div>
+        <p>&copy; 2023 Tu Sitio de Restaurantes. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

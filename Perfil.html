@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil de Usuario</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Agregado: Estilos personalizados -->
+    <style>
+        .card-body {
+            color: black;
+        }
+        .modal-content {
+            color: black;
+        }
+    </style>
+</head>
+<body class="bg-dark text-light">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Tu Sitio de Restaurantes</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Restaurantes.html">Restaurantes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Perfil.html">Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container bg-white p-4 rounded my-5">
+        <h1 class="text-dark">Mi Perfil de Usuario</h1>
+
+        <section>
+            <h2 class="text-dark">Información Personal</h2>
+            <p class="text-dark">Nombre: Juan Pérez</p>
+            <p class="text-dark">Correo Electrónico: juan@example.com</p>
+            <p class="text-dark">Fecha de Nacimiento: 01/01/1990</p>
+            <!-- Puedes agregar más detalles personales aquí -->
+        </section>
+
+        <section>
+            <h2 class="text-dark">Configuración de Cuenta</h2>
+            <p class="text-dark">Nombre de Usuario: juan90</p>
+            <p class="text-dark">Contraseña: **********</p>
+            <!-- Puedes incluir más opciones de configuración aquí -->
+        </section>
+    </div>
+        <!-- Ventana Modal de Confirmación -->
+        <div class="modal fade" id="confirmarEliminacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Confirmar Eliminación</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ¿Estás seguro de que deseas eliminar esta reserva?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-danger">Eliminar Reserva</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <section>
+        <div class="container bg-white p-4 rounded my-4">
+            <h2 class="text-dark">Mis Reservas</h2>
+        
+            <!-- Primera reserva -->
+            <div class="container mt-4 bg-white rounded p-3">
+                <div class="row">
+                    <!-- Imagen del restaurante -->
+                    <div class="col-md-3">
+                        <img src="Restaurante 1.jpg" alt="Restaurante 1" class="img-fluid">
+                    </div>
+                    <!-- Detalles de la reserva -->
+                    <div class="col-md-6">
+                        <h4 class="text-dark">Nombre del Restaurante 1</h4>
+                        <p class="text-dark">Fecha de la Reserva: 01/02/2023</p>
+                    </div>
+                    <!-- Botones "Modificar Reserva" y "Eliminar Reserva" -->
+                    <div class="col-md-3">
+                        <!-- Modificado: Agregado data-toggle y data-target para activar la ventana modal -->
+                        <button class="btn btn-primary mb-2"><a style="text-decoration: none; color: aliceblue;" href="Modificar.html">Modificar Reserva</a></button>
+                        <button class="btn btn-danger" data-toggle="modal" data-target="#confirmarEliminacion">Eliminar Reserva</button>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Segunda reserva -->
+            <div class="container mt-4 bg-white rounded p-3">
+                <div class="row">
+                    <!-- Imagen del restaurante -->
+                    <div class="col-md-3">
+                        <img src="Restaurante 2.jpeg" alt="Restaurante 2" class="img-fluid">
+                    </div>
+                    <!-- Detalles de la reserva -->
+                    <div class="col-md-6">
+                        <h4 class="text-dark">Nombre del Restaurante 2</h4>
+                        <p class="text-dark">Fecha de la Reserva: 02/03/2023</p>
+                    </div>
+                    <!-- Botones "Modificar Reserva" y "Eliminar Reserva" -->
+                    <div class="col-md-3">
+                        <button class="btn btn-primary mb-2"><a style="text-decoration: none; color: aliceblue;" href="Modificar.html">Modificar Reserva</a></button>
+                        <button class="btn btn-danger" data-toggle="modal" data-target="#confirmarEliminacion">Eliminar Reserva</button>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Puedes agregar más reservas siguiendo el mismo formato -->
+        </div>
+    
+        <!-- Puedes agregar más reservas siguiendo el mismo formato -->
+    </section>
+
+    <footer class="bg-secondary text-light text-center py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Reservación de Restaurante</h4>
+                    <a href="pagina_reservacion.html">Reservar ahora</a>
+                </div>
+                <div class="col-md-4">
+                    <h4>Enlaces</h4>
+                    <a href="acerca_de_nosotros.html">Acerca de Nosotros</a>
+                </div>
+                <div class="col-md-4">
+                    <h4>Contacto</h4>
+                    <p>Teléfono: +123456789</p>
+                    <p>Email: info@tusitioderestaurantes.com</p>
+                    <p>Dirección: Calle Principal #123, Ciudad</p>
+                </div>
+            </div>
+        </div>
+        <p>&copy; 2023 Tu Sitio de Restaurantes. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
