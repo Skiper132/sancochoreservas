@@ -1,0 +1,146 @@
+/* Estilos generales del carrusel */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.carousel-track-container {
+  width: 100%;
+  margin: auto;
+}
+
+.carousel-track {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  transition: transform 300ms ease-in-out;
+}
+
+.carousel-slide {
+  flex: 0 0 auto;
+  width: calc(100% / 3); /* Ajusta esto según cuántas tarjetas quieres mostrar por página */
+  box-sizing: border-box;
+  margin-right: 15px; /* Ajusta el espaciado entre las tarjetas */
+}
+
+/* Media query para ajustar el carrusel en pantallas más pequeñas */
+@media (max-width: 768px) {
+  .carousel-slide {
+      width: 100%;
+  }
+}
+
+/* Estilos para los botones de navegación del carrusel */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  padding: 10px;
+  font-size: 24px;
+}
+
+.carousel-button-left {
+  left: 10px;
+}
+
+.carousel-button-right {
+  right: 10px;
+}
+
+/* Estilos de las tarjetas de restaurante en el carrusel */
+.restaurante-card {
+  background: #ffffff;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 20px; /* Espacio debajo de cada tarjeta para evitar el solapamiento con los botones del carrusel */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.restaurante-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.restaurante-info {
+  padding: 15px;
+}
+
+.restaurante-nombre {
+  margin: 0;
+  padding-bottom: 10px;
+  color: #333;
+}
+
+.restaurante-descripcion {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.restaurante-estado {
+  padding: 10px 0;
+  color: #333;
+}
+
+.restaurante-estado .open {
+  color: #5cb85c;
+}
+
+.restaurante-estado .closed {
+  color: #d9534f;
+}
+
+.restaurante-actions {
+  padding-top: 10px;
+}
+
+.restaurante-actions .btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.restaurante-actions .reserva-btn {
+  background-color: #5cb85c;
+  color: white;
+}
+
+.restaurante-actions .reserva-btn.disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.restaurante-actions .ver-mas-btn {
+  background-color: #337ab7;
+  color: white;
+}
+
+/* Estilos para los mensajes de error */
+#errorContainer {
+  display: none;
+  text-align: center;
+  padding: 10px;
+  margin: 20px;
+  color: #d9534f;
+  border: 1px solid #ebccd1;
+  border-radius: 5px;
+  background-color: #f2dede;
+}
+
+#errorContainer .mensaje-error {
+  margin: 0;
+  padding: 10px;
+  font-size: 1.1em;
+}

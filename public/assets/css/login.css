@@ -1,0 +1,79 @@
+/* login.css */
+body {
+    background-color: #343a40;
+    color: #ffffff;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    text-align: center;
+}
+
+.logo {
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+.login-form-container {
+    max-width: 400px;
+    margin: 20px auto; /* Se cambió margin a 'auto' para centrar horizontalmente */
+}
+
+form {
+    background-color: #292b2c;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+form label {
+    color: #ffffff;
+    display: block; /* Para que la etiqueta ocupe toda la línea y esté arriba del input */
+    margin-bottom: 5px; /* Espacio entre la etiqueta y el input */
+}
+
+form input {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box; /* Se añadió para incluir el padding y el borde en el ancho total */
+    display: block; /* Para que el input ocupe toda la línea */
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.error-message {
+    color: #dc3545;
+    margin-top: 10px;
+}
+
+form p {
+    color: #ffffff;
+    margin-top: 15px;
+}
+
+.form-group .input-container {
+    display: flex;
+    flex-direction: column;
+}

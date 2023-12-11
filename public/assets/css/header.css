@@ -1,0 +1,128 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilos para el header */
+header {
+    background-color: #343a40; /* Color de fondo oscuro para el header */
+    color: #ffffff; /* Color de texto blanco */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+}
+
+/* Estilos para el logo */
+.logo img {
+    height: 50px; /* Altura fija para el logo */
+    width: auto; /* Ajusta automáticamente el ancho */
+}
+
+/* Estilos para la barra de navegación */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center; /* Centra verticalmente los enlaces */
+    flex-wrap: wrap; /* Permite el ajuste en pantallas pequeñas */
+}
+
+nav ul li {
+    padding: 10px; /* Espaciado alrededor de los elementos de la lista */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    color: #ffd700; /* Cambia el color al pasar el mouse o enfocar */
+}
+
+/* Estilos para el dropdown */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #343a40;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 1;
+    right: 0; /* Alinea el borde derecho del menú desplegable con el borde derecho del elemento padre */
+}
+
+nav .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li a {
+    display: block; /* Hace que el enlace llene el espacio horizontal */
+    padding: 5px 10px; /* Espaciado interno para los enlaces del dropdown */
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover, .dropdown-menu li a:focus {
+    background-color: #50575d; /* Agrega un fondo al pasar el mouse o enfocar */
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+        text-align: center; /* Centra el contenido en pantallas pequeñas */
+    }
+
+    .logo, .greeting, nav {
+        width: 100%; /* Ajusta a ancho completo para apilar elementos */
+        margin-bottom: 10px; /* Espacio entre elementos cuando están apilados */
+    }
+
+    nav ul {
+        flex-direction: column; /* Ajusta los elementos de la lista en una columna */
+        align-items: stretch; /* Estira los elementos de la lista para llenar el ancho */
+        padding-top: 15px; /* Espacio adicional en la parte superior para el menú desplegable */
+    }
+
+    nav ul li {
+        width: 100%; /* Ajusta cada elemento de la lista a ancho completo */
+        display: block; /* Asegura que los elementos de la lista se muestren como bloques */
+    }
+
+    nav ul li a {
+        padding: 10px 15px; /* Aumenta el relleno para una mejor área de toque */
+        display: block; /* Hace que los enlaces se muestren como bloques */
+        text-align: center; /* Centra el texto de los enlaces */
+    }
+
+    .dropdown {
+        position: relative; /* Posiciona el menú desplegable en relación con su elemento padre */
+    }
+
+    .dropdown-menu {
+        position: static; /* Mantiene el menú desplegable en el flujo normal del documento */
+        width: 100%; /* Ajusta el menú desplegable al ancho completo */
+        box-shadow: none;
+        display: none; /* Oculta el menú desplegable */
+        border-top: 1px solid #50575d; /* Añade un borde en la parte superior para separarlo del menú principal */
+    }
+
+    .dropdown-menu li a {
+        padding: 10px 15px; /* Espaciado interno más amplio para los enlaces del dropdown en pantallas pequeñas */
+        border-bottom: 1px solid #50575d; /* Añade un borde entre los elementos del menú desplegable */
+    }
+
+    .dropdown-menu li a:hover, .dropdown-menu li a:focus {
+        background-color: #50575d; /* Agrega un fondo al pasar el mouse o enfocar */
+    }
+
+    .dropdown:hover .dropdown-menu, .dropdown:focus-within .dropdown-menu {
+        display: block; /* Muestra el menú desplegable al pasar el mouse o enfocar */
+    }
+}

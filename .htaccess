@@ -1,0 +1,7 @@
+# Activa el módulo de reescritura
+RewriteEngine On
+
+# Redirige todas las solicitudes a index.php excepto los archivos y directorios reales
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]

@@ -1,0 +1,54 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Estilos del contenido principal */
+  #content {
+    width: 85%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  #content h1 {
+    color: #333;
+    font-size: 2.5em;
+    margin-top: 0;
+  }
+  
+  #content p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+  }
+  
+  #content h2 {
+    color: #333;
+    font-size: 2em;
+    margin-top: 40px;
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    #content {
+      width: 95%;
+      padding: 15px;
+    }
+  
+    #content h1 {
+      font-size: 2em;
+    }
+  
+    #content h2 {
+      font-size: 1.5em;
+    }
+  }
+  

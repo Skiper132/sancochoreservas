@@ -1,0 +1,71 @@
+/* CSS para el footer.php */
+
+/* Reset de estilos y ajustes generales */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo general del footer */
+body {
+    margin-bottom: 80px; /* Altura estimada del footer para dejar espacio en la parte inferior */
+}
+
+footer {
+    background-color: #343a40; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+    padding: 40px 0; /* Espaciado interno */
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos para las secciones del footer */
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+/* Estilos para los enlaces del footer */
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el mapa del footer */
+.footer-section.map iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+}
+
+/* Estilos para la sección inferior del footer */
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    background-color: #292b2c; /* Fondo más oscuro */
+}
+
+.footer-bottom p {
+    font-size: 0.8em;
+}
